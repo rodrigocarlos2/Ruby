@@ -44,9 +44,15 @@ class Timer
 				@seconds = @seconds - 60;
 				j = 0
 			end
+			
+			puts " "
+			puts " "
+			puts " "
 		
 			puts "#{i}:#{j}"
 			sleep 1.0
+			system("cls")
+			# in Linux make: system("clear")
 			j = j+1
 		
 		end

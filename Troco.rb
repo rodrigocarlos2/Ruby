@@ -1,7 +1,7 @@
 
-
 $value
 $count
+$moedas = Array.new
 
 class Troco
 
@@ -14,21 +14,25 @@ class Troco
 		if value>=100
 		
 			$value = $value-100
+			$moedas << 100;
 			$count = $count + 1
 			
 		elsif value>=25
 		
 			$value = $value-25
+			$moedas << 25;
 			$count = $count + 1
 			
 		elsif value>=10
 		
 			$value = $value-10
+			$moedas << 10;
 			$count = $count + 1
 			
 		elsif value>=1
 		
 			$value = $value-1
+			$moedas << 1;
 			$count = $count + 1
 		
 		end
@@ -48,12 +52,20 @@ class Principal
 	
 	while $value>0
 	
-		puts $value
-	
 		t = Troco.new
 		
 		t.troco($value)
-	
+		
+		for i in 0..($moedas.size-1)
+		
+			print " "
+			print $moedas[i]
+			print " "
+		
+		end
+		
+		puts " "
+		
 	end
 	
 	puts "Número de moedas: #{$count}"

@@ -1,0 +1,10 @@
+
+Commands importants:
+
+rake db:drop:all
+
+rm -r NameProject
+
+They are commands for delete your project in Ruby on Rails.
+
+Author: Rodrigo
